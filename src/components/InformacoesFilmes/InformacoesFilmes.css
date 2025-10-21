@@ -1,0 +1,16 @@
+.estatisticas-resumo {
+    font-weight: normal;
+    display: flex;
+    gap: 3rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.25rem;
+    justify-content: center;
+    user-select: none;
+}
+
+.estatisticas-resumo p {
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+    margin: 0;
+}

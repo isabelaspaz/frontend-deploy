@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+}
+
+.navbar-app-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu-usuario-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo-video {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    filter: invert(1);
+    margin-right: 6px;
+}

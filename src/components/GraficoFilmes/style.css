@@ -1,0 +1,110 @@
+:root {
+    --primary-bright-color: #E50914;
+    /* vermelho Netflix */
+    --secondary-bright-color: #131313;
+    /* cinza escuro */
+    --secondary-dark-color: #000000;
+    /* preto mais escuro */
+    --tertiary-bright-color: #ffffff;
+    /* branco */
+    --tertiary-dense-fog-color: rgba(255, 255, 255, 0.6);
+    /* branco translúcido */
+}
+
+/* Container principal */
+.grafico-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: var(--secondary-dark-color);
+    /* preto */
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filtros select {
+    background-color: var(--secondary-bright-color);
+    color: var(--tertiary-bright-color);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-dark-color);
+    font-weight: bold;
+    min-width: 160px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.info-msg,
+.erro-msg {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.info-msg {
+    color: var(--tertiary-dense-fog-color);
+    background-color: var(--secondary-bright-color);
+}
+
+.erro-msg {
+    color: var(--primary-bright-color);
+    background-color: rgba(229, 9, 20, 0.2);
+}
+
+/* Toast Netflix-like customizado */
+.netflix-toast {
+    background: var(--secondary-dark-color) !important;
+    /* preto Netflix */
+    color: var(--tertiary-bright-color) !important;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6) !important;
+    border: 1px solid var(--primary-bright-color) !important;
+    padding: 12px 20px !important;
+    min-width: 320px !important;
+    max-width: 600px !important;
+}
+
+.netflix-toast button[aria-label="close"] {
+    color: var(--primary-bright-color) !important;
+    opacity: 0.8;
+}
+
+.netflix-toast button[aria-label="close"]:hover {
+    opacity: 1;
+}
+
+/* Esconde a barra de progresso padrão */
+.Toastify__progress-bar {
+    display: none !important;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filtros select {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .grafico-container {
+        padding: 1.5rem 1rem;
+    }
+}

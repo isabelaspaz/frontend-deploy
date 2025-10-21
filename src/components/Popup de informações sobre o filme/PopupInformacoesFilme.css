@@ -1,0 +1,155 @@
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    color: white;
+    padding: 20px 24px;
+    border-radius: 8px;
+    width: 90vw;
+    max-width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    font-family: 'Arial', sans-serif;
+}
+
+.popup-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.popup-container::-webkit-scrollbar-track {
+    background: #1c1c1c;
+    border-radius: 8px;
+}
+
+.popup-container::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 8px;
+    border: 2px solid #1c1c1c;
+}
+
+.popup-container::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+
+.popup-container {
+    scrollbar-width: thin;
+    scrollbar-color: #444 #1c1c1c;
+}
+
+
+.popup-container button[aria-label="Fechar"] {
+    float: right;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.popup-container button[aria-label="Fechar"]:hover {
+    color: #e50914;
+}
+
+
+.popup-container img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.popup-container input[type="text"],
+.popup-container input[type="number"],
+.popup-container textarea,
+.popup-container select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.popup-container input[type="text"]:focus,
+.popup-container input[type="number"]:focus,
+.popup-container textarea:focus,
+.popup-container select:focus {
+    background-color: #444;
+    outline: none;
+}
+
+
+.popup-container label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 4px;
+    user-select: none;
+}
+
+.popup-btn {
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    margin-right: 12px;
+}
+
+.popup-btn.salvar {
+    background-color: #e50914;
+    color: white;
+}
+
+.popup-btn.salvar:hover,
+.popup-btn.salvar:focus {
+    background-color: #bf0810;
+    outline: none;
+}
+
+.popup-btn.cancelar {
+    background-color: transparent;
+    color: #eee;
+    border: 2px solid #eee;
+}
+
+.popup-btn.cancelar:hover,
+.popup-btn.cancelar:focus {
+    background-color: #eee;
+    color: #141414;
+    outline: none;
+}
+
+.popup-btn.excluir {
+    background-color: transparent;
+    color: #e50914;
+    border: 2px solid #e50914;
+}
+
+.popup-btn.excluir:hover,
+.popup-btn.excluir:focus {
+    background-color: #e50914;
+    color: white;
+    outline: none;
+}
+
+.popup-container p {
+    text-align: justify;
+}

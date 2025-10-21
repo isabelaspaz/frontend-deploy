@@ -1,0 +1,14 @@
+.container_Estatisticas {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 2rem;
+    background-color: #141414;
+    min-height: 100vh;
+    color: white;
+}
+
+.titulo-estatisticas {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}

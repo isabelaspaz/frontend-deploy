@@ -1,0 +1,77 @@
+.cadastro-opcoes {
+    position: relative;
+    min-height: 100vh;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+.cadastro-opcoes h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+}
+
+.botoes button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(229, 9, 20, 0.6);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.botoes button:hover {
+    background-color: #bf0810;
+}
+
+.conteudo {
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-right: 4rem;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+
+.btn-fechar:hover {
+    color: #e50914;
+}

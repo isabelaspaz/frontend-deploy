@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tela-inicial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #141414;
+    color: white;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.tela-inicial h2 {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header-filmes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 1rem auto;
+    flex-wrap: nowrap;
+}
+
+.header-filmes h2 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.lupaemais {
+    display: flex;
+    gap: 8px;
+}
+
+.acoes-header {
+    flex: 1;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.botoes-menu {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+
+.botao-lupa,
+.btn-adicionar {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comecar {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    user-select: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+    background-color: red;
+    height: 40px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.botao-lupa svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.btn-adicionar:hover,
+.botao-lupa:hover,
+.btn-comecar:hover {
+    background-color: #bf0810;
+}
+
+.lista-filmes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.card-filme {
+    width: 150px;
+    background-color: #1c1c1c;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.15s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-filme:hover {
+    transform: scale(1.05);
+}
+
+.poster-filme {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #333;
+}
+
+.titulo-filme {
+    padding: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+select[name="statusFilme"] {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: #1c1c1c;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L6 6L11 1' stroke='white' stroke-width='2'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px 7px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+select[name="statusFilme"]:focus {
+    outline: none;
+    border-color: #e50914;
+    background-color: #2a2a2a;
+}
+
+select[name="statusFilme"] option {
+    background-color: #141414;
+    color: #fff;
+    font-weight: 600;
+}
+
+select[name="statusFilme"] option:hover,
+select[name="statusFilme"] option:focus {
+    background-color: #e50914;
+    color: white;
+}
+
+.mensagem-vazia {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.input-busca {
+    height: 32px;
+    max-width: 200px;
+    min-width: 120px;
+    padding: 0 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    background-color: #333;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.input-busca::placeholder {
+    color: #bbb;
+    font-style: italic;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+    .header-filmes {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .botoes-menu {
+        justify-content: flex-start;
+        /* botões ficam à esquerda */
+        width: 100%;
+    }
+
+    .input-busca {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .btn-comecar {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    select[name="statusFilme"] {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .card-filme {
+        width: 80vw;
+    }
+
+    .poster-filme {
+        height: auto;
+        aspect-ratio: 2 / 3;
+    }
+}

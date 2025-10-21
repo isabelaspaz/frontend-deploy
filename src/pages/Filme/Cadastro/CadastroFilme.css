@@ -1,0 +1,108 @@
+.container-cadastro {
+    position: relative;
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #222;
+    color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    padding-top: 3rem;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    padding: 0.5rem 0.75rem;
+    border: 1.8px solid #555;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    background-color: #333;
+    color: white;
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 0.25rem 0.5rem;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+input[type="file"]:focus {
+    outline: none;
+    border-color: #0077ff;
+    box-shadow: 0 0 5px #0077ffaa;
+}
+
+button[type="submit"] {
+    background-color: #0077ff;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #005ecb;
+}
+
+p {
+    color: #d93025;
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+}
+
+div>p {
+    color: #bbb;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.btn-fechar:hover {
+    color: #e50914;
+}
+
+@media (max-width: 640px) {
+    .container-cadastro {
+        margin: 1rem;
+        padding: 1rem 1.5rem 2rem;
+    }
+}

@@ -1,0 +1,77 @@
+.homeContainer {
+    background-color: #000;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.homeTitle {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+    letter-spacing: 4px;
+    user-select: none;
+}
+
+.homeSlogan {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #b3b3b3;
+    user-select: none;
+    font-style: normal;
+}
+
+.homeVideo {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    filter: invert(1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    margin-bottom: 3rem;
+}
+
+
+.homeActions {
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    margin-bottom: 0;
+}
+
+.loginMainButton {
+    background-color:#e50914;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+.loginMainButton:hover {
+    background-color: #bf0810;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* evita scroll horizontal */
+    height: 100%;
+    width: 100%;
+}

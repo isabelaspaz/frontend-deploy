@@ -1,30 +1,42 @@
+#Definindo o nome que vai ser exibido no github para identificar essa pipeline:
 name: Deploy node + Render
- 
-on:
-  push:
-    branches:
-      - main
- 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
- 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
- 
-      - name: Setup Node.Js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-     
-      - name: Install dependencies
-        run: npm install
 
-      - name: Deploy to Render
-        uses: johnbeynon/render-deploy-action@v0.0.8
+#Configurando os gatilhos, quando o workflow deve ser executado:
+on:
+  push: #Vai ser acionado com um push
+    branches: #Na branch main
+      - main
+
+#Definindo os jobs:
+jobs:
+  #Nomeando o job (só tem um, por isso une build e deploy):
+  build-and-deploy:
+    runs-on: ubuntu-latest #Definindo que o ambiente de execução vai ser uma máquina virtual Linux temporária fornecida pelo github actions:
+
+    #Definindo o passo a passo:
+    steps:
+      #Passo 1: Baixar o código do repositório do github para a máquina virtual:
+      - name: Checkout code #Nome do passo 1
+        uses: actions/checkout@v4 #Clona a branch main e coloca os arquivos na máquina virtual.
+
+      #Passo 2:  Configurar o ambiente para executar comandos Node.js:
+      - name: Setup Node.Js #Nome do passo 2
+        uses: actions/setup-node@v4 #Utiliza a ação padrão para instalar o Node
         with:
+          node-version: "20" #Na versão 20
+    
+      #Passo 3: Configurar o amiente para executar comandos NPM:
+      - name: Install dependencies #Nome do passo 3
+        run: npm install #Define que ao rodar npm install, as dependências serão baixadas.
+
+      #Passo 4: Definir a implantação no Render:
+      - name: Deploy to Render #Nome do passo 4
+      #Utiliza essa ação customizada para se comunicar com a API do Render:
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with: #Configurações da ação do deploy:
+          #Passa o ID único do serviço Render usando uma variável secreta configurada no github:
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          #Passa a chave de API do Render para autenticação na plataforma utilizando uma variável secreta:
           api-key: ${{ secrets.RENDER_API_KEY }}
+          #Define que o github actions aguarde até que o render confirme que o deploy foi concluído com êxito antes de finalizar o workflow.
           wait-for-success: true
- 
